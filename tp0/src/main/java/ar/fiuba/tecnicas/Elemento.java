@@ -12,8 +12,8 @@ public class Elemento {
 		return ( this.tipoElemento == ((Elemento)otro).tipoElemento );
 	}
 
-	public Elemento vs(Elemento elemento) {	
-		return (new Elemento(Math.max(this.tipoElemento,elemento.tipoElemento)*( (this.tipoElemento+elemento.tipoElemento) % 2 ) + Math.min(this.tipoElemento,elemento.tipoElemento)*( 1 - ( (this.tipoElemento+elemento.tipoElemento) % 2 ) )));
+	public Elemento vs(Elemento otro) {	
+		return (new Elemento(Math.max(this.tipoElemento,otro.tipoElemento)*( (this.tipoElemento+otro.tipoElemento) % 2 ) + Math.min(this.tipoElemento,otro.tipoElemento)*( 1 - ( (this.tipoElemento+otro.tipoElemento) % 2 ) )));
 	}
 
 }

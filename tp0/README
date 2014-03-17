@@ -1,0 +1,12 @@
+Para recrear el funcionamiento del juego:
+
++ Se definió un mapeo: 1:Piedra, 2:Papel, 3:Tijera
+
++ Luego de observar la mecánica del juego y teniendo en cuenta las restricciones impuestas, se intenta buscar una forma de cálculo que me devuelva inmediatamente el resultado del ganador del juego.
+
++ Contemplando todas la combinaciones posibles y el mapeo creado se observa que:
+	- Cuando la suma de los dos elementos es par, el ganador es el de número mas alto.
+	- Cuando la suma de los dos elementos es impar, el ganador es el de número mas bajo. Aquí se incluyen a los empates (la suma es par), donde el número mas bajo y el mas alto coinciden.
+	  
++ A partir de las obsevaciones se genera una función que reproduzca esta situación: 
+	F(Elem1,Elem2) =  Max(Elem1,Elem2) * Mod2(Elem1+Elem2) + Min(Elem1,Elem2) * (1-Mod2(Elem1+Elem2)) 
