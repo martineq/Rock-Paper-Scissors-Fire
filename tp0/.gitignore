@@ -1,1 +1,55 @@
-/bin
+######################
+# Directorios #
+######################
+/build/
+/bin/
+target/
+
+######################
+# Archivos del SO #
+######################
+*.class
+
+# Paquetes #
+*.jar
+*.war
+*.ear
+*.db
+
+######################
+# Windows
+######################
+
+# Cache de archivos de imágenes
+Thumbs.db
+
+# Archivo de configuración de carpeta
+Desktop.ini
+
+######################
+# Eclipse
+######################
+*.pydevproject
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+*.launch
+
+# Carpeta External tool builders
+.externalToolBuilders/
+
+# Para C/C++
+.cproject
+
+# Para PHP
+.buildpath
