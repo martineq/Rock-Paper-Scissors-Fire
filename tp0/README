@@ -1,3 +1,4 @@
+### Primer Entrega ###
 Para recrear el funcionamiento del juego:
 
 + Se definió un mapeo: 1:Piedra, 2:Papel, 3:Tijera
@@ -9,4 +10,12 @@ Para recrear el funcionamiento del juego:
 	- Cuando la suma de los dos elementos es impar, el ganador es el de número mas bajo. Aquí se incluyen a los empates (la suma es par), donde el número mas bajo y el mas alto coinciden.
 	  
 + A partir de las obsevaciones se genera una función que reproduzca esta situación: 
-	F(Elem1,Elem2) =  Max(Elem1,Elem2) * Mod2(Elem1+Elem2) + Min(Elem1,Elem2) * (1-Mod2(Elem1+Elem2)) 
+	F(Elem1,Elem2) =  Max(Elem1,Elem2) * Mod2(Elem1+Elem2) + Min(Elem1,Elem2) * (1-Mod2(Elem1+Elem2))
+	
+### Segunda Entrega ### 
+
++ A partir de las correcciones sobre la primer entrega y de la necesidad de extender el código, se modifica la implementación anterior pasando a usar el "Double Dispatch".
+
++ Este cambio produjo un gran impacto en el código debido a que aunque la versión anterior era mucho mas pequeña en tamaño, también era mucho más rígida en cuanto a aceptación de cambios.
+
++ Con esta nueva versión se intenta dejar de tener un código rígido, reducir el acoplamiento y realizar una separación de responsabilidades por cada clase.
