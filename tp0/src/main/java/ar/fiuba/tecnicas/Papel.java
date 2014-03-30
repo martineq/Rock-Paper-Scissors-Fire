@@ -6,7 +6,6 @@ public class Papel implements Elemento {
 		return ( object instanceof Papel );
 	}
 	
-	@Override
 	public Elemento vs(Elemento elemento) {
 		return elemento.vs(this);
 	}
@@ -16,10 +15,14 @@ public class Papel implements Elemento {
 	}
 
 	public Elemento vs(Papel papel){
-		return papel;
+		return this;
 	}
 	
 	public Elemento vs(Tijera tijera){
 		return tijera;
+	}
+	
+	public Elemento vs(Fuego fuego){
+		return fuego;
 	}
 }

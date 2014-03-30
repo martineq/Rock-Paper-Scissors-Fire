@@ -12,6 +12,7 @@ public class RulesTest {
     private Elemento rock = new Piedra();
 	private Elemento paper = new Papel();
     private Elemento scissors = new Tijera();
+    private Elemento fire = new Fuego();
 
     @Test
     public void rockBeatsScissors() {
@@ -29,6 +30,11 @@ public class RulesTest {
     }
 
     @Test
+    public void rockBeatsFire() {
+    	assertEquals(rock, rock.vs(fire));
+    }
+    
+    @Test
     public void paperBeatsRock() {
     	assertEquals(paper, paper.vs(rock));
     }
@@ -44,6 +50,11 @@ public class RulesTest {
     }
 
     @Test
+    public void paperLostWithFire() {
+    	assertEquals(fire, paper.vs(fire));
+    }
+    
+    @Test
     public void scissorsBeatsPaper() {
     	assertEquals(scissors, scissors.vs(paper));
     }
@@ -56,5 +67,30 @@ public class RulesTest {
     @Test
     public void scissorsTieWithScissors() {
     	assertEquals(scissors, scissors.vs(scissors));
+    }
+
+    @Test
+    public void scissorsLostWithFire() {
+    	assertEquals(fire, scissors.vs(fire));
+    }
+
+    @Test
+    public void fireLostWithRock() {
+    	assertEquals(rock, fire.vs(rock));
+    }
+    
+    @Test
+    public void fireBeatsPaper() {
+    	assertEquals(fire, fire.vs(paper));
+    }
+    
+    @Test
+    public void fireBeatsScissors() {
+    	assertEquals(fire, fire.vs(scissors));
+    }
+    
+    @Test
+    public void fireTieWithFire() {
+    	assertEquals(new Fuego(), fire.vs(fire));
     }
 }

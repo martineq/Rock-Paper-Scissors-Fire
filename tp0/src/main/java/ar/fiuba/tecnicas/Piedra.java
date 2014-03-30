@@ -6,7 +6,6 @@ public class Piedra implements Elemento {
 		return ( object instanceof Piedra );
 	}
 
-	@Override
 	public Elemento vs(Elemento elemento) {
 		return elemento.vs(this);
 	}
@@ -20,6 +19,10 @@ public class Piedra implements Elemento {
 	}
 	
 	public Elemento vs(Tijera tijera){
+		return this;
+	}
+	
+	public Elemento vs(Fuego fuego){
 		return this;
 	}
 }

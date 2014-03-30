@@ -1,9 +1,9 @@
 package main.java.ar.fiuba.tecnicas;
 
-public class Tijera implements Elemento {
-	
+public class Fuego implements Elemento {
+
 	public boolean equals(Object object){
-		return ( object instanceof Tijera );
+		return ( object instanceof Fuego );
 	}
 	
 	public Elemento vs(Elemento elemento) {
@@ -13,16 +13,16 @@ public class Tijera implements Elemento {
 	public Elemento vs(Piedra piedra){
 		return piedra;
 	}
-	
+
 	public Elemento vs(Papel papel){
 		return this;
 	}
-
+	
 	public Elemento vs(Tijera tijera){
 		return this;
 	}
 	
 	public Elemento vs(Fuego fuego){
-		return fuego;
+		return this;
 	}
 }
