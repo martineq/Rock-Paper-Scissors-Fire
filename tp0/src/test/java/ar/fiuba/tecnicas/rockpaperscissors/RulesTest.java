@@ -1,6 +1,6 @@
 package ar.fiuba.tecnicas.rockpaperscissors;
 
-import main.java.ar.fiuba.tecnicas.Elemento;
+import main.java.ar.fiuba.tecnicas.*;
 
 import org.junit.Test;
 
@@ -9,9 +9,9 @@ import static org.junit.Assert.assertEquals;
 
 public class RulesTest {
 
-    private Elemento rock = new Elemento(1);
-	private Elemento paper = new Elemento(2);
-    private Elemento scissors = new Elemento(3);
+    private Elemento rock = new Piedra();
+	private Elemento paper = new Papel();
+    private Elemento scissors = new Tijera();
 
     @Test
     public void rockBeatsScissors() {
